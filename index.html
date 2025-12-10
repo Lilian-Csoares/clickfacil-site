@@ -245,63 +245,49 @@ header.hero{
       </div>
     </section>
 
-    <!-- FORMULÁRIO + INFO -->
-    <section class="section" aria-labelledby="form-title">
-      <h2 id="form-title">Solicite Seu Crédito</h2>
+   <!-- FORMULÁRIO + INFO -->
+<section class="section" aria-labelledby="form-title">
+  <h2 id="form-title">Solicite Seu Crédito</h2>
 
-      <div class="form-wrap">
-        <!-- Formulário (envia para formsubmit -> operacional.elobank@gmail.com) -->
-        <form class="lead-form"
-              action="https://formsubmit.co/operacional.elobank@gmail.com"
-              method="POST"
-              accept-charset="UTF-8"
-        >
-          <!-- campos com name obrigatórios para email -->
-          <input name="name" type="text" placeholder="Seu nome completo" required>
-          <input name="email" type="email" placeholder="Seu e-mail" required>
-          <input name="phone" type="tel" placeholder="Seu telefone (ex: 11999998888)" required>
-          <textarea name="message" placeholder="Mensagem ou tipo de crédito desejado (ex: consignado INSS, servidor público, etc.)"></textarea>
+  <div class="form-wrap">
 
-          <!-- configurações do FormSubmit (opcionais) -->
-          <!-- _subject altera assunto do e-mail recebido -->
-          <input type="hidden" name="_subject" value="Nova solicitação - ClickFácil">
-          <!-- _captcha pode ser true/false; se quiser ativar captcha, remova esta linha -->
-          <input type="hidden" name="_captcha" value="false">
-          <!-- _next define página para onde o usuário é redirecionado após envio (opcional). 
-               Se preferir, coloque aqui a URL do seu agradecimento (ex: https://seusite.com/thanks.html) -->
-          <!-- <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
+    <!-- Formulário funcionando para enviar ao email operacional.elobank@gmail.com -->
+    <form class="lead-form"
+          action="https://formsubmit.co/operacional.elobank@gmail.com"
+          method="POST"
+          accept-charset="UTF-8"
+    >
 
-          <!-- consentimento -->
-          <div class="consent">
-            <input id="consent" type="checkbox" required>
-            <label for="consent" style="font-size:14px; color:var(--muted);">
-              Concordo com os&nbsp;
-              <a href="#termos" class="smalllinks">Termos de Uso</a>
-              &nbsp;e a&nbsp;
-              <a href="#privacidade" class="smalllinks">Política de Privacidade</a>.
-            </label>
-          </div>
+      <!-- campos enviados para o email -->
+      <input name="nome" type="text" placeholder="Seu nome completo" required>
+      <input name="email" type="email" placeholder="Seu e-mail" required>
+      <input name="telefone" type="tel" placeholder="Seu telefone (ex: 11999998888)" required>
+      <textarea name="mensagem" placeholder="Mensagem ou tipo de crédito desejado"></textarea>
 
-          <button type="submit" aria-label="Enviar solicitação">Enviar Solicitação</button>
-        </form>
+      <!-- configurações FormSubmit -->
+      <input type="hidden" name="_subject" value="Nova solicitação - ClickFácil">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-        <!-- caixa com contato rápido -->
-        <aside class="contact-info" aria-label="Contato">
-          <p style="font-size:15px; font-weight:700; color:#153b6b;">Fale conosco</p>
-          <p>Atendimento via WhatsApp (resposta rápida)</p>
+      <!-- redirecionamento após envio (opcional) -->
+      <!-- <input type="hidden" name="_next" value="https://SEUSITE/obrigado.html"> -->
 
-          <a class="phone" href="https://wa.me/message/2MJJF5TF6ZOIG1?src=qr" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            (11) 96175-2355
-          </a>
-
-          <p style="margin-top:10px; font-size:13px; color:var(--muted);">
-            Ou envie sua solicitação pelo formulário — responderemos por e-mail/WhatsApp.
-          </p>
-        </aside>
+      <!-- consentimento -->
+      <div class="consent">
+        <input id="consent" type="checkbox" required>
+        <label for="consent" style="font-size:14px; color:var(--muted);">
+          Concordo com os&nbsp;
+          <a href="#termos" class="smalllinks">Termos de Uso</a>
+          &nbsp;e a&nbsp;
+          <a href="#privacidade" class="smalllinks">Política de Privacidade</a>.
+        </label>
       </div>
-    </section>
 
+      <button type="submit" aria-label="Enviar solicitação">Enviar Solicitação</button>
+    </form>
+
+  </div>
+</section>
     <!-- TERMOS E PRIVACIDADE -->
     <section id="termos" class="section" aria-labelledby="termos-title">
       <h2 id="termos-title">Termos de Uso</h2>
